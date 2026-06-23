@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Skip Control</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<div class="app">
+
+<div class="header">
+    <h1>YouTube Skip Control</h1>
+</div>
+
+<div class="card">
+    <div class="toggle-row">
+        <span>Enable Extension</span>
+
+        <label class="switch">
+            <input type="checkbox" id="enabled">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+<div class="card">
+
+    <label class="label">
+        Forward Skip
+    </label>
+
+    <select id="forwardPreset">
+        <option value="5">5 Seconds</option>
+        <option value="10">10 Seconds</option>
+        <option value="30">30 Seconds</option>
+        <option value="60">1 Minute</option>
+        <option value="120">2 Minutes</option>
+        <option value="300">5 Minutes</option>
+        <option value="custom">Custom</option>
+    </select>
+
+    <div id="forwardCustom" class="custom-row">
+        <input
+            type="number"
+            id="forwardValue"
+            min="1"
+            placeholder="Value"
+        >
+
+        <select id="forwardUnit">
+            <option value="seconds">Seconds</option>
+            <option value="minutes">Minutes</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <label class="label">
+        Backward Skip
+    </label>
+
+    <select id="backwardPreset">
+        <option value="5">5 Seconds</option>
+        <option value="10">10 Seconds</option>
+        <option value="30">30 Seconds</option>
+        <option value="60">1 Minute</option>
+        <option value="120">2 Minutes</option>
+        <option value="300">5 Minutes</option>
+        <option value="custom">Custom</option>
+    </select>
+
+    <div id="backwardCustom" class="custom-row">
+        <input
+            type="number"
+            id="backwardValue"
+            min="1"
+            placeholder="Value"
+        >
+
+        <select id="backwardUnit">
+            <option value="seconds">Seconds</option>
+            <option value="minutes">Minutes</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="shortcuts">
+
+    <div class="shortcut-title">
+        Keyboard Shortcuts
+    </div>
+
+    <div class="shortcut-item">
+        Ctrl + Shift + →
+        <span>Forward</span>
+    </div>
+
+    <div class="shortcut-item">
+        Ctrl + Shift + ←
+        <span>Backward</span>
+    </div>
+
+</div>
+
+<button id="saveBtn">
+    Save Settings
+</button>
+
+<div id="message"></div>
+
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
